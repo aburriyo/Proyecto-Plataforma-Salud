@@ -23,7 +23,7 @@ async def chat(From: str = Form(...), Body: str = Form(...)):
     
     try:
         # Asume que chat_response es un diccionario y accede a la respuesta
-        response_text = chat_response['choices'][0]['message']['content'] if 'choices' in chat_response else "Lo siento, no pude entender eso."
+        response_text = chat_response
     except TypeError as e:
         # Manejo de error si chat_response no es un diccionario o la estructura es diferente
         print(f"Error al procesar la respuesta: {e}")
